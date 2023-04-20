@@ -131,7 +131,10 @@ function validateForm() {
         "Veuillez entrer 2 caractères ou plus pour le champ du prénom."
       );
     } else if (!isValidName(userFirstNameValue)) {
-      setError(userFirstName, "Provide a valid FirstName");
+      setError(
+        userFirstName,
+        "doit être en alphanumérique et/ou le trait d'union"
+      );
     } else {
       setSuccess(userFirstName);
     }
@@ -141,12 +144,15 @@ function validateForm() {
         "Veuillez entrer 2 caractères ou plus pour le champ du nom."
       );
     } else if (!isValidName(userLastNameValue)) {
-      setError(userLastName, "Provide a valid LastName");
+      setError(
+        userLastName,
+        "doit être en alphanumérique et/ou le trait d'union"
+      );
     } else {
       setSuccess(userLastName);
     }
     if (userEmailValue === "") {
-      setError(userEmail, "Email is required");
+      setError(userEmail, "Veuillez entrer votre L'adresse électronique.");
     } else if (!isValidEmail(userEmailValue)) {
       setError(userEmail, "Provide a valid email address");
     } else {
