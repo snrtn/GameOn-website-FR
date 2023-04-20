@@ -154,7 +154,7 @@ function validateForm() {
     if (userEmailValue === "") {
       setError(userEmail, "Veuillez entrer votre L'adresse électronique.");
     } else if (!isValidEmail(userEmailValue)) {
-      setError(userEmail, "Provide a valid email address");
+      setError(userEmail, "Le format n'est pas valide");
     } else {
       setSuccess(userEmail);
     }
